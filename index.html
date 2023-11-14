@@ -1,0 +1,136 @@
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #ffffff;
+        }
+
+        header {
+            text-align: center;
+            background-color: #ffd4dd;
+            padding: 5px 100px;
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 36px;
+        }
+
+        h3 {
+            color: #f76d88;
+            font-size: 15px;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            width: 80%;
+            padding: 20px;
+        }
+
+        .register-box {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        #js-todo-ttl {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 80%;
+            font-size: 16px;
+        }
+
+        #js-register-btn {
+            padding: 10px 20px;
+            background-color: #f76d88;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #js-register-btn:hover {
+            background-color: #f5446c;
+        }
+
+        .output-flex {
+            display: flex;
+            gap: 20px;
+            width: 80%;
+        }
+
+        .todo-box, .done-box {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            width: 100%;
+        }
+
+        h2 {
+            color: #f76d88;
+            font-size: 24px;
+        }
+
+        .box_list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            padding: 10px;
+            font-size: 18px;
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .done-box ul li {
+            color: #888;
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TODO-List</h1>
+        <h3>This site displays tasks that have not yet been completed separately from tasks that have been completed.</h3>
+        <h3>By displaying tasks separately, it is easier to manage tasks.</h3>
+    </header>
+    <main>
+        <div class="register-box" id="js-add-form">
+            <input id="js-todo-ttl" type="text" placeholder="Title" maxlength="25">
+            <button id="js-register-btn">Add</button>
+        </div>
+
+        <div class="output-flex">
+            <div class="todo-box">
+                <h2>TODO</h2>
+                <ul class="box_list" id="js-todo-list"></ul>
+            </div>
+            <div class="done-box">
+                <h2>Done</h2>
+                <ul class="box_list" id="js-done-list"></ul>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
